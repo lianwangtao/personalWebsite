@@ -18,4 +18,3 @@ app.controller("ProjectController", function ($scope) {
 
 
 'use strict';
-

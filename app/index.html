@@ -4,21 +4,21 @@
 			<meta charset="UTF-8">
 			<title>Shane Lian</title>
 			<link href="stylesheets/index.css" rel="stylesheet" type="text/css">
-			<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
-			<script src="app.js" type="text/javascript"></script>
-			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script> -->
-			<script src="angular.js"></script>
-			<script src="angular-route.js"></script>
-			<link href="animate.css" rel="stylesheet" type="text/css">
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+			<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+			integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+			<script src="scripts/app.js" type="text/javascript"></script>
 			<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
 		</head>
 
 		<body ng-app="shane">
-			<div class="main" >
+		<div class="container">
+			<div class="main row">
 				<!-- Three lines -->
 				<div class="brow">
 					<div class="brick1 logo_container">
-						<a href="#" class="nav-item clearfix">
+						<a href="#" class="nav-item clearfix" style="color: white;">
 							<div class="nav-hover"></div>
 							<h1 class="logo">Shane Lian</h1>
 						</a>
@@ -27,7 +27,7 @@
 				<div class="brow">
 					<div class="brick1 odd tiles">
 						<a href="/about_me" class="nav-item">
-							<div class="nav-hover"></div>
+							<!-- <div class="nav-hover"></div> -->
 							<i class="li_user"></i>
 							<h3 class="title">About Me</h3>
 						</a>
@@ -78,71 +78,76 @@
 					</div>
 				</div>
 			</div>
-	<div class="about-me section_bg">
-		<h1 class="abouth1">About Me</h1>
-			<div class="about_article boffset1">
-	    		<p>Hi Everyone!</p>
-	    		<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
-				<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</a> </p>
-				<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
+
+			<div class="about-me row section_bg">
+				<h1 class="abouth1">About Me</h1>
+					<div class="about_article boffset1">
+			    		<p>Hi Everyone!</p>
+			    		<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
+						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</a> </p>
+						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
+					</div>
 			</div>
-	</div>
 
-	<div class="projects section_bg">
-		<h1 class="abouth1">Projects</h1>
-		<div ng-controller="ProjectController">
-			<div class="brow">
-				<div class="slogan brick1 boffset3 transparent text-right">
-				</div>
-				<div class="brick1 odd tiles" >
-					<a href="#Shuffood" class="nav-item">
-						<div class="nav-hover"></div>
-						<h3 class="title">{{ data.name }}</h3>
-					</a>
-				</div>
+			<div class="projects row section_bg">
+				<h1 class="abouth1">Projects</h1>
+				<div ng-controller="ProjectController">
+					<div class="brow">
+						<div class="slogan brick1 boffset3 transparent text-right">
+						</div>
+						<div class="brick1 odd tiles" >
+							<a href="#Shuffood" class="nav-item">
+								<div class="nav-hover"></div>
+								<h3 class="title">{{ data.name }}</h3>
+							</a>
+						</div>
 
 
-				<div class="slogan brick3 boffset3 transparent text-right">
-				</div>
-				<div class="brick1 odd tiles" >
-					<a href="" class="nav-item">
-						<div class="nav-hover"></div>
-						<h3 class="title">{{ data.name }}</h3>
-					</a>
-				</div>
+						<div class="slogan brick3 boffset3 transparent text-right">
+						</div>
+						<div class="brick1 odd tiles" >
+							<a href="" class="nav-item">
+								<div class="nav-hover"></div>
+								<h3 class="title">{{ data.name }}</h3>
+							</a>
+						</div>
 
-				<div class="slogan brick3 boffset3 transparent text-right">
-				</div>
-				<div class="brick1 odd tiles">
-					<a href="" class="nav-item">
-						<div class="nav-hover"></div>
-						<h3 class="title">{{ data.name }}</h3>
-					</a>
+						<div class="slogan brick3 boffset3 transparent text-right">
+						</div>
+						<div class="brick1 odd tiles">
+							<a href="" class="nav-item">
+								<div class="nav-hover"></div>
+								<h3 class="title">{{ data.name }}</h3>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<div class="resume row">
+					<h1 class="abouth1">Resume</h1>
+			</div>
+
+			<div class="contact row section_bg">
+				<h1 class="abouth1">Contact Me</h1>
+				<div class="contact-icons">
+			        <a href="https://www.facebook.com/lian.wangtao">
+			        	<img src="images/icons/fb_icon_325x325.png" height="40px" width="auto">
+			        </a>
+			        <a href=""></a>
+			        <img src="images/icons/new-twitter-logo-vector-400x400.png" height="40px" width="auto">
+			        <img src="images/icons/youtube_circle_color-256.png" height="40px" width="auto">
+			        <img src="images/icons/itunes.png" height="40px" width="auto">
+			    </div>
+			</div>
+
 		</div>
-	</div>
 
-	<div class="resume">
-		<h1 class="abouth1">Resume</h1>
-	</div>
-
-	<div class="contact section_bg">
-		<h1 class="abouth1">Contact Me</h1>
-		<div class="contact-icons">
-	        <a href="https://www.facebook.com/lian.wangtao">
-	        	<img src="images/icons/fb_icon_325x325.png" height="40px" width="auto">
-	        </a>
-	        <a href=""></a>
-	        <img src="images/icons/new-twitter-logo-vector-400x400.png" height="40px" width="auto">
-	        <img src="images/icons/youtube_circle_color-256.png" height="40px" width="auto">
-	        <img src="images/icons/itunes.png" height="40px" width="auto">   
-	    </div>
-	</div>
 
 		<footer>
-	         <p>© 2015 Shane Lian
-	  	</footer>
+	        <p>© 2015 Shane Lian
+	  </footer>
+
+
 	</body>
 	</html>
-
