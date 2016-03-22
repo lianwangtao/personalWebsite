@@ -87,8 +87,8 @@
 			<div class="projects">
 				<h1 class="abouth1" style="margin-bottom:5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl">
-					<ul class="projects">
-	          <li ng-repeat="project in projects" class="brick1 tiles">
+					<ul class="projects_list">
+	          <li ng-repeat="project in projects" class="brick1 tiles" style="padding-left: 0;">
 	            <a href="#/{{project.name}}"></a>
 								<!-- <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"> -->
 	            <h3 class="title">{{project.name}}</h3>
@@ -125,7 +125,6 @@
 						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
 					</div>
 			</div>
-
 
 
 		<footer class="footer">
