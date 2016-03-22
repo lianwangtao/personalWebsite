@@ -1,0 +1,68 @@
+ [
+    {
+      "name": "Shuffood",
+      "overview": "An iOS App that can suggests and find food for you",
+      "details": "An app will automatically choose one of the most popular food types and search for the restaurant of that type near you. Specially designed for the moment when you can’t decide what to eat. Implemented with Google Maps and Google Places APIs. Now available on Apple App Store.",
+      "link2": "https://goo.gl/skOj66",
+      "link1": "https://github.com/lianwangtao/Shuffood_iOS-APP",
+      "language": [
+        "Swift"
+      ],
+      "time": "2015/08"
+    },
+    {
+      "name": "HelpOut",
+      "overview": "An Ruby On Rails project for posting local help request, featuring user login, authentication and posting.",
+      "details": "Empty",
+      "link1": "https://github.com/colinharris05/helpout.git",
+      "language": [
+        "Ruby",
+        "HTML5",
+        "CSS",
+        "JavaScript"
+      ],
+      "time": "2016/03"
+    },
+    {
+      "name": "Personal Website",
+      "overview": "This Site",
+      "details": "A personal website featuring self-introduction, art portfolio and blog. Developed with HTML, CSS, jQuery and AngularJS. Design inspired by Windows Phone Modern UI.",
+      "link1": "https://www.shanelian.com",
+      "language": [
+        "HTML5",
+        "CSS",
+        "JavaScript"
+      ],
+      "time": "2015/04"
+    },
+    {
+      "name": "Lifting Tracker",
+      "overview": "A simple Java program for keep track of the progress of user’s everyday work out.",
+      "details": "empty",
+      "link1": "https://github.com/lianwangtao/WorkOut.git",
+      "language": [
+        "java"
+      ],
+      "time": "2015/06"
+    },
+    {
+      "name": "Spaceship",
+      "overview": "A 2D game inspired by Space Invader. Developed using Lua and Love2D game engine.",
+      "details": "empty",
+      "link1": "https://github.com/lianwangtao/SpaceShip",
+      "language": [
+        "lua"
+      ],
+      "time": "2015/08"
+    },
+    {
+      "name": "Raspberry Pi Touchscreen Camera",
+      "overview": "A camera based on Raspberry Pi 2 with touchscreen and a camera",
+      "details": "A camera based on Raspberry Pi 2 with touchscreen and a camera module. One can optionally use WiFi and Dropbox (a cloud file storage and synchronization service) to automatically transfer photos to another computer for editing.",
+      "language": [
+        "python",
+        "C"
+      ],
+      "time": "2016/01"
+    }
+]

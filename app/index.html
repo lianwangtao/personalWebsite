@@ -20,7 +20,6 @@
 				<div class="brow">
 					<div class="brick1 logo_container">
 						<a href="#" class="nav-item ">
-							<div class="nav-hover"></div>
 							<h1 class="logo">Shane Lian</h1>
 						</a>
 					</div>
@@ -28,7 +27,6 @@
 				<div class="brow">
 					<div class="brick1 odd tiles">
 						<a href="/about_me" class="nav-item">
-							<div class="nav-hover"></div>
 							<i class="fa fa-user fa-5x font-icon"></i>
 							<h3 class="title">About Me</h3>
 						</a>
@@ -40,14 +38,12 @@
 					</div>
 					<div class="brick1 odd tiles">
 						<a href="#contact" class="nav-item">
-							<div class="nav-hover"></div>
 							<i class="fa fa-phone fa-5x font-icon"></i>
 							<h3 class="title">Contact Me</h3>
 						</a>
 					</div>
 					<div class="brick1 tiles">
 						<a href="#blog" class="nav-item">
-							<div class="nav-hover"></div>
 							<i class="fa fa-rss fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Blog</h3>
 						</a>
@@ -59,14 +55,12 @@
 					</div>
 					<div class="brick1 odd tiles">
 						<a href="#projects" class="nav-item">
-							<div class="nav-hover"></div>
 							<i class="fa fa-lightbulb-o fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Projects</h3>
 						</a>
 					</div>
 					<div class="brick1 tiles" >
 						<a href="#resume" class="nav-item">
-							<div class="nav-hover"></div>
 							<i class="fa fa-file-text-o fa-5x font-icon"></i>
 							<h3 class="title">Resume</h3>
 						</a>
@@ -92,36 +86,14 @@
 
 			<div class="projects">
 				<h1 class="abouth1" style="margin-bottom:5%;">Projects</h1>
-				<div ng-controller="ProjectController">
-					<div class="brow">
-						<div class="slogan brick1 boffset3 transparent text-right">
-						</div>
-						<div class="brick1 odd tiles" >
-							<a href="#Shuffood" class="nav-item">
-								<div class="nav-hover"></div>
-								<h3 class="title">{{ data.name }}</h3>
-							</a>
-						</div>
-
-
-						<div class="slogan brick3 boffset3 transparent text-right">
-						</div>
-						<div class="brick1 odd tiles" >
-							<a href="" class="nav-item">
-								<div class="nav-hover"></div>
-								<h3 class="title">{{ data.name }}</h3>
-							</a>
-						</div>
-
-						<div class="slogan brick3 boffset3 transparent text-right">
-						</div>
-						<div class="brick1 odd tiles">
-							<a href="" class="nav-item">
-								<div class="nav-hover"></div>
-								<h3 class="title">{{ data.name }}</h3>
-							</a>
-						</div>
-					</div>
+				<div ng-controller="projectsListCtrl">
+					<ul class="projects">
+	          <li ng-repeat="project in projects" class="brick1 tiles">
+	            <a href="#/{{project.name}}"></a>
+								<!-- <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"> -->
+	            <h3 class="title">{{project.name}}</h3>
+	          </li>
+	        </ul>
 				</div>
 			</div>
 
