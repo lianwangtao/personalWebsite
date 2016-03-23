@@ -18,9 +18,14 @@ app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window)
   } else {
     $scope.size = "col-md-offset-2";
   }
+
+  $(".brick1").hover(function() {
+    $(this).addClass("pulse");
+    }, function() {
+    $(this).removeClass("pulse");
+  });
+
 }]);
-
-
 
 
 // Scrolling var app = angular.module('app', []);

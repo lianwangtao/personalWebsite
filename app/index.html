@@ -12,7 +12,7 @@
 			<script src="scripts/app.js" type="text/javascript"></script>
 			<link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:400,700' rel='stylesheet' type='text/css'>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-			<link rel="stylesheet" href="stylesheets/animate.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css" type="text/css">
 		</head>
 
 		<body ng-app="shane">
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="brow" ng-controller="windowsizeCtrl" ng-class="size">
-					<div class="brick1 odd tiles" ng-class="animate">
+					<div class="brick1 odd tiles hvr-grow-shadow-1">
 						<a ng-click="gotoElement('aboutme')" class="nav-item">
 							<i class="fa fa-user fa-5x font-icon"></i>
 							<h3 class="title">About Me</h3>
@@ -35,13 +35,13 @@
 					</div>
 					<div class="brick1 thumb img-brick">
 					</div>
-					<div class="brick1 odd tiles">
+					<div class="brick1 odd tiles hvr-grow-shadow-1">
 						<a ng-click="gotoElement('contact')" class="nav-item">
 							<i class="fa fa-phone fa-5x font-icon"></i>
 							<h3 class="title">Contact Me</h3>
 						</a>
 					</div>
-					<div class="brick1 tiles">
+					<div class="brick1 tiles hvr-grow-shadow-1">
 						<a ng-click="gotoElement('blog')" class="nav-item">
 							<i class="fa fa-picture-o fa-5x font-icon" style="padding-left: 20px;"></i>
 							<h3 class="title">Gallery</h3>
@@ -52,13 +52,13 @@
 					<div class="brick1 thumb img-brick" style="margin-left:5px;">
 							<img class="img1" src="images/resources/squre/04.jpg" width="100%" height=auto alt="">
 					</div>
-					<div class="brick1 odd tiles">
+					<div class="brick1 odd tiles hvr-grow-shadow-1">
 						<a ng-click="gotoElement('projects')" class="nav-item">
 							<i class="fa fa-lightbulb-o fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Projects</h3>
 						</a>
 					</div>
-					<div class="brick1 tiles" >
+					<div class="brick1 tiles hvr-grow-shadow-1" >
 						<a ng-click="gotoElement('resume')" class="nav-item">
 							<i class="fa fa-file-text-o fa-5x font-icon"></i>
 							<h3 class="title">Resume</h3>
@@ -74,7 +74,7 @@
 
 				<div class="goDown">
 					<a ng-click="gotoElement('aboutme')">
-						<i class="fa fa-angle-double-down fa-5x"></i>
+						<i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i>
 					</a>
 				</div>
 
@@ -90,7 +90,7 @@
 				</div>
 				<div class="goDown">
 					<a ng-click="gotoElement('projects')">
-						<i class="fa fa-angle-double-down fa-5x"></i>
+						<i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i>
 					</a>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 				<h1 class="abouth1" style="margin-bottom:5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl">
 					<ul class="projects_list" style="padding-left:0;">
-	          <li ng-repeat="project in projects" class="brick1 tiles" style="padding-left: 0;">
+	          <li ng-repeat="project in projects" class="brick1 tiles hvr-grow-shadow-1" style="padding-left: 0;">
 	            <a href="#/{{project.name}}"></a>
 								<!-- <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"> -->
 	            <h3 class="title">{{project.name}}</h3>
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 				<div class="goDown" style="margin-top: 500px;">
-					<a ng-click="gotoElement('resume')"><i class="fa fa-angle-double-down fa-5x font-icon"></i></a>
+					<a ng-click="gotoElement('resume')"><i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i></a>
 				</div>
 			</div>
 
@@ -122,7 +122,7 @@
 						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
 					</div>
 					<div class="goDown">
-						<a ng-click="gotoElement('contact')"><i class="fa fa-angle-double-down fa-5x"></i></a>
+						<a ng-click="gotoElement('contact')"><i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i></a>
 					</div>
 			</div>
 
