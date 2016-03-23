@@ -20,6 +20,9 @@ app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window)
   }
 }]);
 
+
+
+
 // Scrolling var app = angular.module('app', []);
 
 app.service('anchorSmoothScroll', function(){
@@ -91,6 +94,7 @@ app.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {
       anchorSmoothScroll.scrollTo(eID);
 
     };
+
   });
 
 // End of Scrolling
