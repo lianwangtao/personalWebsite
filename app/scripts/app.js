@@ -11,6 +11,15 @@ app.controller('projectsListCtrl', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
+app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window) {
+  var width = document.getElementById("main").clientWidth;
+  if (width > 1265) {
+    $scope.size = "col-md-offset-3";
+  } else {
+    $scope.size = "col-md-offset-2";
+  }
+}]);
+
 // Scrolling var app = angular.module('app', []);
 
 app.service('anchorSmoothScroll', function(){

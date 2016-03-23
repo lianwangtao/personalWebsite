@@ -17,14 +17,14 @@
 		<body ng-app="shane">
 			<div class="main" id="main" id="scrollArea" ng-controller="ScrollCtrl">
 				<!-- Three lines -->
- 				<div class="brow col-lg-offset-3">
+ 				<div class="brow" ng-controller="windowsizeCtrl" ng-class="size">
 					<div class="brick1 logo_container">
 						<a href="#" class="nav-item ">
 							<h1 class="logo">Shane Lian</h1>
 						</a>
 					</div>
 				</div>
-				<div class="brow col-lg-offset-3">
+				<div class="brow" ng-controller="windowsizeCtrl" ng-class="size">
 					<div class="brick1 odd tiles">
 						<a ng-click="gotoElement('aboutme')" class="nav-item">
 							<i class="fa fa-user fa-5x font-icon"></i>
@@ -49,7 +49,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="brow col-lg-offset-3">
+				<div class="brow" ng-controller="windowsizeCtrl" ng-class="size">
 					<div class="brick1 thumb img-brick" style="margin-left:5px;">
 							<img class="img1" src="images/resources/squre/04.jpg" width="100%" height=auto alt="">
 					</div>
