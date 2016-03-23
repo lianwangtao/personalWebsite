@@ -15,18 +15,18 @@
 		</head>
 
 		<body ng-app="shane">
-			<div class="main">
+			<div class="main" id="main" id="scrollArea" ng-controller="ScrollCtrl">
 				<!-- Three lines -->
-				<div class="brow">
+ 				<div class="brow col-lg-offset-3">
 					<div class="brick1 logo_container">
 						<a href="#" class="nav-item ">
 							<h1 class="logo">Shane Lian</h1>
 						</a>
 					</div>
 				</div>
-				<div class="brow">
+				<div class="brow col-lg-offset-3">
 					<div class="brick1 odd tiles">
-						<a href="/about_me" class="nav-item">
+						<a ng-click="gotoElement('aboutme')" class="nav-item">
 							<i class="fa fa-user fa-5x font-icon"></i>
 							<h3 class="title">About Me</h3>
 						</a>
@@ -37,30 +37,30 @@
 					<div class="brick1 thumb img-brick">
 					</div>
 					<div class="brick1 odd tiles">
-						<a href="#contact" class="nav-item">
+						<a ng-click="gotoElement('contact')" class="nav-item">
 							<i class="fa fa-phone fa-5x font-icon"></i>
 							<h3 class="title">Contact Me</h3>
 						</a>
 					</div>
 					<div class="brick1 tiles">
-						<a href="#blog" class="nav-item">
+						<a ng-click="gotoElement('blog')" class="nav-item">
 							<i class="fa fa-rss fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Blog</h3>
 						</a>
 					</div>
 				</div>
-				<div class="brow">
+				<div class="brow col-lg-offset-3">
 					<div class="brick1 thumb img-brick" style="margin-left:5px;">
 							<img class="img1" src="images/resources/squre/04.jpg" width="100%" height=auto alt="">
 					</div>
 					<div class="brick1 odd tiles">
-						<a href="#projects" class="nav-item">
+						<a ng-click="gotoElement('projects')" class="nav-item">
 							<i class="fa fa-lightbulb-o fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Projects</h3>
 						</a>
 					</div>
 					<div class="brick1 tiles" >
-						<a href="#resume" class="nav-item">
+						<a ng-click="gotoElement('resume')" class="nav-item">
 							<i class="fa fa-file-text-o fa-5x font-icon"></i>
 							<h3 class="title">Resume</h3>
 						</a>
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class="about-me">
+			<div class="about-me" id="aboutme">
 				<h1 class="abouth1">About Me</h1>
 				<div>
 				  	<p>Hi Everyone!</p>
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 
-			<div class="projects">
+			<div class="projects" id="projects">
 				<h1 class="abouth1" style="margin-bottom:5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl">
 					<ul class="projects_list">
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 
-			<div class="resume">
+			<div class="resume" id="resume">
 					<h1 class="abouth1">Resume</h1>
 					<div class="about_article">
 							<p>Hi Everyone!</p>
@@ -107,7 +107,7 @@
 					</div>
 			</div>
 
-			<div class="contact">
+			<div class="contact" id="contact">
 				<h1 class="abouth1">Contact Me</h1>
 				<div class="contact-icons">
 			        <a href="https://www.facebook.com/lian.wangtao">

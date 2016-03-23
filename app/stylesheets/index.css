@@ -37,7 +37,6 @@ section {
 .main {
     text-align: center;
     padding-bottom: 15%;
-    padding-left: 20%;
     background-color: #73AAE8;
 }
 
@@ -70,9 +69,7 @@ section {
 }
 
 /* Code from the Argo ---------------------------*/
-/*.brow {
-  margin-left: 15%;
-}*/
+
 
 .brow:before,
 .brow:after {
