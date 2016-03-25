@@ -152,7 +152,7 @@
 	transform: rotate3d(0, 0, 1, -45deg);
 }
 
-.morph-shape {
+.morph-shape-s {
 	position: absolute;
 	width: 240px;
 	height: 100%;
@@ -160,7 +160,7 @@
 	right: 0;
 }
 
-.morph-shape svg path {
+.morph-shape-s svg path {
 	stroke: white;
 	stroke-width: 10px;
 }
