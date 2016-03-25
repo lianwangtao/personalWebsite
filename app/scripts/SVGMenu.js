@@ -38,3 +38,4 @@
       };
       new SVGMenu( document.getElementById( 'menu' ) );
     })();
+  
