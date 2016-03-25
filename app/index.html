@@ -14,10 +14,72 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.0.2/css/hover-min.css" type="text/css">
 			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+			<link href="stylesheets/sidebar.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
 		</head>
 
 		<body ng-app="shane">
+			<div id="menu" class="menu">
+				<div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+					<svg width="80%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+					<path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/></svg>
+				</div>
+						<button class="menu__handle"><span>Menu</span></button>
+						<ul class="menu__inner">
+							<li du-smooth-scroll="main"><i class="fa fa-fw fa-home hvr-grow"></i>Home</li>
+							<li du-smooth-scroll="aboutme"><i class="fa fa-fw fa-user hvr-grow"></i>About Me</li>
+							<li du-smooth-scroll="projects"><i class="fa fa-fw fa-lightbulb-o hvr-grow"></i>Projects</li>
+							<li du-smooth-scroll=""><i class="fa fa-fw fa-image hvr-grow"></i>Gallery</li>
+							<li du-smooth-scroll="resume"><i class="fa fa-fw fa-file-text-o hvr-grow"></i>Resume</li>
+							<li du-smooth-scroll="contact"><i class="fa fa-fw fa-phone hvr-grow"></i>Contact</li>
+						</ul>
+				</div>
+			<script>
+				(function() {
+						function SVGMenu( el, options ) {
+							this.el = el;
+							this.init();
+						}
+						SVGMenu.prototype.init = function() {
+							this.trigger = this.el.querySelector( 'button.menu__handle' );
+							this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+							var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+							this.pathEl = s.select( 'path' );
+							this.paths = {
+								reset : this.pathEl.attr( 'd' ),
+								open : this.shapeEl.getAttribute( 'data-morph-open' ),
+								close : this.shapeEl.getAttribute( 'data-morph-close' )
+							};
+							this.isOpen = false;
+							this.initEvents();
+						};
+						SVGMenu.prototype.initEvents = function() {
+							this.trigger.addEventListener( 'click', this.toggle.bind(this) );
+						};
+						SVGMenu.prototype.toggle = function() {
+							var self = this;
+							if( this.isOpen ) {
+								classie.remove( self.el, 'menu--anim' );
+								setTimeout( function() { classie.remove( self.el, 'menu--open' );	}, 250 );
+							}
+							else {
+								classie.add( self.el, 'menu--anim' );
+								setTimeout( function() { classie.add( self.el, 'menu--open' );	}, 250 );
+							}
+							this.pathEl.stop().animate( { 'path' : this.isOpen ? this.paths.close : this.paths.open }, 350, mina.easeout, function() {
+								self.pathEl.stop().animate( { 'path' : self.paths.reset }, 800, mina.elastic );
+							} );
+
+							this.isOpen = !this.isOpen;
+						};
+						new SVGMenu( document.getElementById( 'menu' ) );
+					})();
+				</script>
+
 			<div class="main container-fluid" id="main" id="scrollArea" >
+
 				<!-- Three lines -->
  				<div ng-controller="windowsizeCtrl" ng-class="size">
 					<div class="brick1 logo_container hvr-underline-from-center-1">
@@ -72,12 +134,6 @@
 					</div>
 				</div>
 
-				<div class="goDown" du-smooth-scroll="aboutme">
-					<a>
-						<i class="fa fa-3x hvr-icon-hang"></i>
-					</a>
-				</div>
-
 			</div>
 
  			<div class="about-me container-fluid" id="aboutme" >
@@ -89,11 +145,7 @@
 						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</p>
 						<p style="margin-bottom:50px;">Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
 				</div>
-				<div class="goDown">
-					<a >
-						<i class="fa fa-3x hvr-icon-hang"></i>
-					</a>
-				</div>
+
 			</div>
 
 			<div class="projects container-fluid" id="projects" >
@@ -109,9 +161,6 @@
 	        </ul>
 				</div>
 			</div>
-				<div class="goDown" style="margin-top: 500px;">
-					<a ><i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i></a>
-				</div>
 			</div>
 
 			<div class="resume container-fluid" id="resume" >
@@ -121,9 +170,6 @@
 							<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
 						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</a> </p>
 						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
-					</div>
-					<div class="goDown">
-						<a ><i class="fa fa-angle-double-down fa-3x hvr-icon-hang"></i></a>
 					</div>
 			</div>
 
