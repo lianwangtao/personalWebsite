@@ -107,6 +107,8 @@ section {
 .main {
     background-color: #1DA3EE;
     padding-top: 5%;
+    overflow:auto;
+
 }
 
 .logo_container {
@@ -290,6 +292,8 @@ section {
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
+    display: block;
+    overflow:auto;
 }
 
 
@@ -304,8 +308,6 @@ section {
     font-size: 30px;
     padding-left: 13%;
     padding-right: 13%;
-    padding-bottom: 10%;
-    margin-bottom: 10%;
 }
 
 .about_img {
@@ -334,6 +336,7 @@ section {
     padding-top: 50px;
     width: 100%;
     color:white;
+    overflow:auto;
 }
 
 .projects_list {

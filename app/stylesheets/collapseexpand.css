@@ -9,19 +9,14 @@
 
 .box--expander {
 	width: 25%;
-	width: 195px;
-	min-width: 195px;
-	height: 195px;
+	width: 234px;
+	min-width: 234px;
+	height: 234px;
 	margin: 0 auto;
 	-webkit-transition: width 0.2s, height 0.2s;
 	transition: width 0.2s, height 0.2s;
 }
 
-.box--collapser.box--close {
-	opacity: 0;
-	-webkit-transform: scale3d(0,0,1);
-	transform: scale3d(0,0,1);
-}
 
 .box--expander.box--sizeup {
 	width: 100%;
