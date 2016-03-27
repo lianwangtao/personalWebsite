@@ -3,7 +3,7 @@
  */
 
  'use strict';
-var app = angular.module('shane', ['duScroll','ngMaterial']);
+var app = angular.module('shane', ['duScroll','ngMaterial','ngMdIcons']);
 
 app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http) {
   $http.get('projects.json').success(function(data) {
