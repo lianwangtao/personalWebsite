@@ -56,7 +56,7 @@
 					</div>
 				</div>
 				<div ng-controller="windowsizeCtrl" ng-class="size">
-					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="aboutme">
+					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="aboutme" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-user fa-5x font-icon"></i>
 							<h3 class="title">About Me</h3>
@@ -66,13 +66,13 @@
 						<img class="img1" src="images/resources/squre/07.jpg" width="100%" height=auto alt="">
 					</div>
 					<div class="brick1 thumb img-brick"></div>
-					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="contact">
+					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="contact" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-phone fa-5x font-icon"></i>
 							<h3 class="title">Contact Me</h3>
 						</a>
 					</div>
-					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="">
+					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-picture-o fa-5x font-icon" style="padding-left: 20px;"></i>
 							<h3 class="title">Gallery</h3>
@@ -83,13 +83,13 @@
 					<div class="brick1 thumb img-brick" style="margin-left:5px;">
 							<img class="img1" src="images/resources/squre/04.jpg" width="100%" height=auto alt="">
 					</div>
-					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="projects">
+					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="projects" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-lightbulb-o fa-5x font-icon" style="padding-left: 35px;"></i>
 							<h3 class="title">Projects</h3>
 						</a>
 					</div>
-					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="resume">
+					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="resume" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-file-text-o fa-5x font-icon"></i>
 							<h3 class="title">Resume</h3>
@@ -122,8 +122,8 @@
 				<h1 class="abouth1" style="margin-bottom: 5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl">
 					<md-list class="projects_list" style="padding-left:0; padding-bottom: 100px;">
-						<md-list-item ng-repeat="project in projects" style="display: inline-block;">
-							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)">
+						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
+							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
 								<a class="nav-item">
 									<h3 class="title">{{project.name}}</h3>
 									<h3 class="title">{{project.time}}</h3>
@@ -141,11 +141,47 @@
 			<div class="resume container-fluid" id="resume" >
 					<h1 class="abouth1">Resume</h1>
 					<div class="about_article">
-							<p>Hi Everyone!</p>
-							<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
-						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</a> </p>
-						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
+						<md-list flex>
+		 					<md-toolbar class="md-hue-2">
+								<div class="md-toolbar-tools">
+        					<span>Education</span>
+      					</div>
+    					</md-toolbar>
+		 					<md-list-item class="md-3-line" style="background-color:white;">
+			 				<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
+			 				<div class="md-list-item-text" layout="column">
+					 			<h3>Fuyang Elementary School</h3>
+					 			<h4>2002-2008</h4>
+			 				</div>
+		 				</md-list-item>
+						<md-divider ></md-divider>
+						<md-list-item class="md-3-line" style="background-color:white;">
+						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+						<div class="md-list-item-text" layout="column">
+							<h3>Hangzhou Entel Foreign Language School</h3>
+							<h4>Middle School</h4>
+							<h4>2008-2011</h4>
+						</div>
+					</md-list-item>
+						<md-divider ></md-divider>
+						<md-list-item class="md-3-line" style="background-color:white;">
+						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+						<div class="md-list-item-text" layout="column">
+							<h3>Hangzhou Entel Foreign Language School</h3>
+							<h4>High School</h4>
+							<h4>2011-2014</h4>
+						</div>
+					</md-list-item>
+					<md-divider ></md-divider>
+					<md-list-item class="md-3-line" style="background-color:white;">
+					<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
+					<div class="md-list-item-text" layout="column">
+						<h3>University of Wisonsin-Madison</h3>
+						<h4>College</h4>
+						<h4>2014-2018</h4>
 					</div>
+				</md-list-item>
+				</div>
 			</div>
 
 			<div class="contact container-fluid" id="contact" >

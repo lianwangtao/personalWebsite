@@ -5,7 +5,7 @@
  'use strict';
 var app = angular.module('shane', ['duScroll','ngMaterial']);
 
-app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http, projectService) {
+app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http) {
   $http.get('projects.json').success(function(data) {
     $scope.projects = data;
   });
@@ -83,7 +83,7 @@ app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) 
 
 
 //Controller for Angualr Material Dialog
-app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia, projectService) {
+app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia) {
   $scope.status = '  ';
   $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
 
@@ -140,22 +140,3 @@ function DialogController($scope, $mdDialog, project) {
     $mdDialog.hide(answer);
   };
 }
-
-//Service for passing variables
-app.service('projectService', function() {
-  var projectList = [];
-
-  var addProject = function(newObj) {
-      projectList.push(newObj);
-  };
-
-  var getProjects = function(){
-      return projectList;
-  };
-
-  return {
-    addProject: addProject,
-    getProjects: getProjects
-  };
-
-});
