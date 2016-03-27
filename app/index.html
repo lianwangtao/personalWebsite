@@ -119,18 +119,18 @@
 
 			<div class="projects" id="projects" >
 				<div class="content" ng-controller="AppCtrl">
-				<h1 class="abouth1" style="margin: 0;">Projects</h1>
+				<h1 class="abouth1" style="margin-bottom: 5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl">
-					<ul class="projects_list" style="padding-left:0; padding-bottom: 100px;">
-						<li ng-repeat="project in projects">
-							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event)">
+					<md-list class="projects_list" style="padding-left:0; padding-bottom: 100px;">
+						<md-list-item ng-repeat="project in projects" style="display: inline-block;">
+							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)">
 								<a class="nav-item">
 									<h3 class="title">{{project.name}}</h3>
 									<h3 class="title">{{project.time}}</h3>
 								</a>
 							</div>
-						</li>
-					</ul>
+						</md-list-item>
+					</md-list>
 
 				</div>
 

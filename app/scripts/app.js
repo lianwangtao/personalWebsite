@@ -5,7 +5,7 @@
  'use strict';
 var app = angular.module('shane', ['duScroll','ngMaterial']);
 
-app.controller('projectsListCtrl', ['$scope', '$http', function($scope, $http) {
+app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http, projectService) {
   $http.get('projects.json').success(function(data) {
     $scope.projects = data;
   });
@@ -60,7 +60,7 @@ app.controller('expandCtrl', ['$scope', '$window', function($scope, $window) {
 }]);
 */
 
-app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window) {
+app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) {
   var width = document.getElementById("main").clientWidth;
   if (width < 768) {
     $scope.size = "brow col-xs-offset-1";
@@ -81,36 +81,40 @@ app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window)
 
 }]);
 
+
 //Controller for Angualr Material Dialog
-app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia) {
+app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia, projectService) {
   $scope.status = '  ';
   $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
 
-  $scope.showAdvanced = function(ev) {
-    var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
-    $mdDialog.show({
-      controller: DialogController,
-      templateUrl: '/partials/dialog1.tmpl.html',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true,
-      fullscreen: useFullScreen
-    })
-    .then(function(answer) {
-      $scope.status = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.status = 'You cancelled the dialog.';
-    });
-    $scope.$watch(function() {
-      return $mdMedia('xs') || $mdMedia('sm');
-    }, function(wantsFullScreen) {
-      $scope.customFullscreen = (wantsFullScreen === true);
-    });
-  };
-  $scope.showTabDialog = function(ev) {
+  // $scope.showAdvanced = function(ev) {
+  //   var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+  //   $mdDialog.show({
+  //     controller: DialogController,
+  //     templateUrl: '/partials/dialog1.tmpl.html',
+  //     parent: angular.element(document.body),
+  //     targetEvent: ev,
+  //     clickOutsideToClose:true,
+  //     fullscreen: useFullScreen
+  //   })
+  //   .then(function(answer) {
+  //     $scope.status = 'You said the information was "' + answer + '".';
+  //   }, function() {
+  //     $scope.status = 'You cancelled the dialog.';
+  //   });
+  //   $scope.$watch(function() {
+  //     return $mdMedia('xs') || $mdMedia('sm');
+  //   }, function(wantsFullScreen) {
+  //     $scope.customFullscreen = (wantsFullScreen === true);
+  //   });
+  // };
+  $scope.showTabDialog = function(ev,project) {
     $mdDialog.show({
       controller: DialogController,
       templateUrl: 'partials/tabDialog.tmpl.html',
+      locals: {
+        project: project
+      },
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -122,7 +126,10 @@ app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia) {
         });
   };
 });
-function DialogController($scope, $mdDialog) {
+function DialogController($scope, $mdDialog, project) {
+
+  $scope.project = project;
+
   $scope.hide = function() {
     $mdDialog.hide();
   };
@@ -133,3 +140,22 @@ function DialogController($scope, $mdDialog) {
     $mdDialog.hide(answer);
   };
 }
+
+//Service for passing variables
+app.service('projectService', function() {
+  var projectList = [];
+
+  var addProject = function(newObj) {
+      projectList.push(newObj);
+  };
+
+  var getProjects = function(){
+      return projectList;
+  };
+
+  return {
+    addProject: addProject,
+    getProjects: getProjects
+  };
+
+});
