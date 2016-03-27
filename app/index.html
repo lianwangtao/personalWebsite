@@ -72,7 +72,7 @@
 							<h3 class="title">Contact Me</h3>
 						</a>
 					</div>
-					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="" md-ink-ripple>
+					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="gallery" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-picture-o fa-5x font-icon" style="padding-left: 20px;"></i>
 							<h3 class="title">Gallery</h3>
@@ -125,8 +125,7 @@
 						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
 							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
 								<a class="nav-item">
-									<h3 class="title">{{project.name}}</h3>
-									<h3 class="title">{{project.time}}</h3>
+									<h3 style="font-size:20px; text-align:center;">{{project.name}}</h3>
 								</a>
 							</div>
 						</md-list-item>
@@ -136,6 +135,97 @@
 
 
 			</div>
+			</div>
+
+			<div class="resume container-fluid" id="resume" >
+					<h1 class="abouth1">Resume</h1>
+					<div class="about_article">
+						<md-list flex>
+							<md-toolbar class="md-hue-2">
+								<div class="md-toolbar-tools">
+									<span>Education</span>
+								</div>
+							</md-toolbar>
+							<md-list-item class="md-3-line" style="background-color:white;">
+							<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
+							<div class="md-list-item-text" layout="column">
+								<h3>Fuyang Elementary School</h3>
+								<h4>2002-2008</h4>
+							</div>
+						</md-list-item>
+						<md-divider ></md-divider>
+						<md-list-item class="md-3-line" style="background-color:white;">
+						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+						<div class="md-list-item-text" layout="column">
+							<h3>Hangzhou Entel Foreign Language School</h3>
+							<h4>Middle School</h4>
+							<h4>2008-2011</h4>
+						</div>
+					</md-list-item>
+						<md-divider ></md-divider>
+						<md-list-item class="md-3-line" style="background-color:white;">
+						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+						<div class="md-list-item-text" layout="column">
+							<h3>Hangzhou Entel Foreign Language School</h3>
+							<h4>High School</h4>
+							<h4>2011-2014</h4>
+						</div>
+					</md-list-item>
+					<md-divider ></md-divider>
+					<md-list-item class="md-3-line" style="background-color:white;">
+					<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
+					<div class="md-list-item-text" layout="column">
+						<h3>University of Wisonsin-Madison</h3>
+						<h4>College</h4>
+						<h4>2014-2018</h4>
+					</div>
+				</md-list-item>
+				</div>
+			</div>
+
+			<div class="gallery container-fluid" id="gallery" ng-controller="AppCtrl">
+				<h1 class="abouth1">Gallery</h1>
+					<div class="about_article">
+  <md-grid-list
+        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+    <md-grid-tile class="gray"
+        md-rowspan="3" md-colspan="2" md-colspan-sm="1">
+      <md-grid-tile-footer>
+        <h3>#1: (3r x 2c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    <md-grid-tile class="green">
+      <md-grid-tile-footer>
+        <h3>#2: (1r x 1c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    <md-grid-tile class="yellow">
+      <md-grid-tile-footer>
+        <h3>#3: (1r x 1c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    <md-grid-tile class="blue"
+        md-rowspan="2">
+      <md-grid-tile-footer>
+        <h3>#4: (2r x 1c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    <md-grid-tile class="red"
+        md-rowspan="2" md-colspan="2" md-colspan-sm="1">
+      <md-grid-tile-footer>
+        <h3>#5: (2r x 2c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    <md-grid-tile class="green"
+        md-rowspan="2" >
+      <md-grid-tile-footer>
+        <h3>#6: (2r x 1c)</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+					</div>
 			</div>
 
 			<div class="resume container-fluid" id="resume" >
@@ -184,13 +274,10 @@
 				</div>
 			</div>
 
-			<div class="contact container-fluid" id="contact" >
+			<div class="contact container-fluid" id="contact" ng-controller="AppCtrl" ng-cloak>
 				<h1 class="abouth1">Contact Me</h1>
 					<div class="about_article">
-							<p>Hi Everyone!</p>
-							<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
-						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</a> </p>
-						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
+
 					</div>
 			</div>
 
