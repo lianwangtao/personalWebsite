@@ -1,2 +1,3 @@
 # personalWebsite
-A Personal Website with AngularJS
+A Personal Website with AngularJS and Angular Material 
+
