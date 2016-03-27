@@ -3,7 +3,7 @@
  */
 
  'use strict';
-var app = angular.module('shane', ['duScroll']);
+var app = angular.module('shane', ['duScroll','ngMaterial']);
 
 app.controller('projectsListCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('projects.json').success(function(data) {
@@ -11,7 +11,8 @@ app.controller('projectsListCtrl', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
-
+//Controller for expanding
+/*
 app.controller('expandCtrl', ['$scope', '$window', function($scope, $window) {
   var i = 0;
   (function() {
@@ -57,7 +58,7 @@ app.controller('expandCtrl', ['$scope', '$window', function($scope, $window) {
           new SVGExpander( document.getElementById( 'expander' ) );
         })();
 }]);
-
+*/
 
 app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window) {
   var width = document.getElementById("main").clientWidth;
@@ -79,3 +80,56 @@ app.controller('windowsizeCtrl', ['$scope', '$window', function($scope, $window)
   });
 
 }]);
+
+//Controller for Angualr Material Dialog
+app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia) {
+  $scope.status = '  ';
+  $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+
+  $scope.showAdvanced = function(ev) {
+    var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: '/partials/dialog1.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: useFullScreen
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+    $scope.$watch(function() {
+      return $mdMedia('xs') || $mdMedia('sm');
+    }, function(wantsFullScreen) {
+      $scope.customFullscreen = (wantsFullScreen === true);
+    });
+  };
+  $scope.showTabDialog = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'partials/tabDialog.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    })
+        .then(function(answer) {
+          $scope.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          $scope.status = 'You cancelled the dialog.';
+        });
+  };
+});
+function DialogController($scope, $mdDialog) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+}
