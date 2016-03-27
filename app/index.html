@@ -40,8 +40,8 @@
 							<li du-smooth-scroll="main"><i class="fa fa-fw fa-home hvr-grow"></i>Home</li>
 							<li du-smooth-scroll="aboutme"><i class="fa fa-fw fa-user hvr-grow"></i>About Me</li>
 							<li du-smooth-scroll="projects"><i class="fa fa-fw fa-lightbulb-o hvr-grow"></i>Projects</li>
-							<li du-smooth-scroll=""><i class="fa fa-fw fa-image hvr-grow"></i>Gallery</li>
-							<li du-smooth-scroll="resume"><i class="fa fa-fw fa-file-text-o hvr-grow"></i>Resume</li>
+							<li du-smooth-scroll="gallery"><i class="fa fa-fw fa-image hvr-grow"></i>Gallery</li>
+							<li du-smooth-scroll="resume"><i class="fa fa-fw fa-graduation-cap hvr-grow"></i>Education</li>
 							<li du-smooth-scroll="contact"><i class="fa fa-fw fa-phone hvr-grow"></i>Contact</li>
 						</ul>
 				</div>
@@ -91,8 +91,8 @@
 					</div>
 					<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="resume" md-ink-ripple>
 						<a class="nav-item">
-							<i class="fa fa-file-text-o fa-5x font-icon"></i>
-							<h3 class="title">Resume</h3>
+							<i class="fa fa-graduation-cap fa-5x font-icon" style="padding-left: 10px;"></i>
+							<h3 class="title">Education</h3>
 						</a>
 					</div>
 					<div class="brick1 thumb img-brick">
@@ -117,10 +117,10 @@
 
 			</div>
 
-			<div class="projects" id="projects" >
+			<div class="projects container-fluid" id="projects" >
 				<div class="content" ng-controller="AppCtrl">
 				<h1 class="abouth1" style="margin-bottom: 5%;">Projects</h1>
-				<div ng-controller="projectsListCtrl">
+				<div ng-controller="projectsListCtrl" class="about_article">
 					<md-list class="projects_list" style="padding-left:0; padding-bottom: 100px;">
 						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
 							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
@@ -138,44 +138,40 @@
 			</div>
 
 			<div class="resume container-fluid" id="resume" >
-					<h1 class="abouth1">Resume</h1>
+					<h1 class="abouth1">Education</h1>
 					<div class="about_article">
 						<md-list flex>
-							<md-toolbar class="md-hue-2">
-								<div class="md-toolbar-tools">
-									<span>Education</span>
-								</div>
-							</md-toolbar>
 							<md-list-item class="md-3-line" style="background-color:white;">
 							<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
 							<div class="md-list-item-text" layout="column">
-								<h3>Fuyang Elementary School</h3>
-								<h4>2002-2008</h4>
+								<h3 style="font-size:20px;">Fuyang Elementary School</h3>
+								<h4 style="font-size:15px;"> Elementary School </h4>
+								<h4 style="font-size:15px;">2002-2008</h4>
 							</div>
 						</md-list-item>
 						<md-divider ></md-divider>
 						<md-list-item class="md-3-line" style="background-color:white;">
 						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
 						<div class="md-list-item-text" layout="column">
-							<h3>Hangzhou Entel Foreign Language School</h3>
-							<h4>Middle School</h4>
-							<h4>2008-2011</h4>
+							<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
+							<h4 style="font-size:15px;">Middle School</h4>
+							<h4 style="font-size:15px;">2008-2011</h4>
 						</div>
 					</md-list-item>
 						<md-divider ></md-divider>
 						<md-list-item class="md-3-line" style="background-color:white;">
 						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
 						<div class="md-list-item-text" layout="column">
-							<h3>Hangzhou Entel Foreign Language School</h3>
-							<h4>High School</h4>
-							<h4>2011-2014</h4>
+							<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
+							<h4 style="font-size:15px;">High School</h4>
+							<h4 style="font-size:15px;">2011-2014</h4>
 						</div>
 					</md-list-item>
 					<md-divider ></md-divider>
 					<md-list-item class="md-3-line" style="background-color:white;">
 					<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
 					<div class="md-list-item-text" layout="column">
-						<h3>University of Wisonsin-Madison</h3>
+						<h3 style="font-size:20px;">University of Wisonsin-Madison</h3>
 						<h4>College</h4>
 						<h4>2014-2018</h4>
 					</div>
@@ -183,101 +179,113 @@
 				</div>
 			</div>
 
-			<div class="gallery container-fluid" id="gallery" ng-controller="AppCtrl">
+			<!-- <div class="gallery" id="gallery">
 				<h1 class="abouth1">Gallery</h1>
-					<div class="about_article">
-  <md-grid-list
-        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
-        md-row-height-gt-md="1:1" md-row-height="2:2"
-        md-gutter="12px" md-gutter-gt-sm="8px" >
-    <md-grid-tile class="gray"
-        md-rowspan="3" md-colspan="2" md-colspan-sm="1">
-      <md-grid-tile-footer>
-        <h3>#1: (3r x 2c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-    <md-grid-tile class="green">
-      <md-grid-tile-footer>
-        <h3>#2: (1r x 1c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-    <md-grid-tile class="yellow">
-      <md-grid-tile-footer>
-        <h3>#3: (1r x 1c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-    <md-grid-tile class="blue"
-        md-rowspan="2">
-      <md-grid-tile-footer>
-        <h3>#4: (2r x 1c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-    <md-grid-tile class="red"
-        md-rowspan="2" md-colspan="2" md-colspan-sm="1">
-      <md-grid-tile-footer>
-        <h3>#5: (2r x 2c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-    <md-grid-tile class="green"
-        md-rowspan="2" >
-      <md-grid-tile-footer>
-        <h3>#6: (2r x 1c)</h3>
-      </md-grid-tile-footer>
-    </md-grid-tile>
-  </md-grid-list>
-					</div>
-			</div>
+				<md-grid-list flex
+					        md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"
+					        md-row-height-gt-md="1:1" md-row-height="2:2"
+					        md-gutter="12px" md-gutter-gt-sm="8px" style="margin-bottom:5%;">
+					    <md-grid-tile class="gray">
+					      <md-grid-tile-footer>
+					        <h3>#1: (3r x 2c)</h3>
+					      </md-grid-tile-footer>
+					    </md-grid-tile>
+					    <md-grid-tile class="green">
+					      <md-grid-tile-footer>
+					        <h3>#2: (1r x 1c)</h3>
+					      </md-grid-tile-footer>
+					    </md-grid-tile>
+					    <md-grid-tile class="yellow">
+					      <md-grid-tile-footer>
+					        <h3>#3: (1r x 1c)</h3>
+					      </md-grid-tile-footer>
+					    </md-grid-tile>
+					    <md-grid-tile class="red"
+					        md-rowspan="2" md-colspan="2" md-colspan-sm="1">
+					      <md-grid-tile-footer>
+					        <h3>#5: (2r x 2c)</h3>
+					      </md-grid-tile-footer>
+					    </md-grid-tile>
+					    <md-grid-tile class="green"
+					        md-rowspan="2" >
+					      <md-grid-tile-footer>
+					        <h3>#6: (2r x 1c)</h3>
+					      </md-grid-tile-footer>
+					    </md-grid-tile>
+					  </md-grid-list>
+			</div> -->
 
-			<div class="resume container-fluid" id="resume" >
-					<h1 class="abouth1">Resume</h1>
+			<div class="contact" id="contact">
+				<h1 class="abouth1" style="color: white;">Contact Me</h1>
 					<div class="about_article">
-						<md-list flex>
-		 					<md-toolbar class="md-hue-2">
-								<div class="md-toolbar-tools">
-        					<span>Education</span>
-      					</div>
-    					</md-toolbar>
-		 					<md-list-item class="md-3-line" style="background-color:white;">
-			 				<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
-			 				<div class="md-list-item-text" layout="column">
-					 			<h3>Fuyang Elementary School</h3>
-					 			<h4>2002-2008</h4>
-			 				</div>
-		 				</md-list-item>
-						<md-divider ></md-divider>
-						<md-list-item class="md-3-line" style="background-color:white;">
-						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-						<div class="md-list-item-text" layout="column">
-							<h3>Hangzhou Entel Foreign Language School</h3>
-							<h4>Middle School</h4>
-							<h4>2008-2011</h4>
-						</div>
-					</md-list-item>
-						<md-divider ></md-divider>
-						<md-list-item class="md-3-line" style="background-color:white;">
-						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-						<div class="md-list-item-text" layout="column">
-							<h3>Hangzhou Entel Foreign Language School</h3>
-							<h4>High School</h4>
-							<h4>2011-2014</h4>
-						</div>
-					</md-list-item>
-					<md-divider ></md-divider>
-					<md-list-item class="md-3-line" style="background-color:white;">
-					<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
-					<div class="md-list-item-text" layout="column">
-						<h3>University of Wisonsin-Madison</h3>
-						<h4>College</h4>
-						<h4>2014-2018</h4>
-					</div>
-				</md-list-item>
-				</div>
-			</div>
-
-			<div class="contact container-fluid" id="contact" ng-controller="AppCtrl" ng-cloak>
-				<h1 class="abouth1">Contact Me</h1>
-					<div class="about_article">
-
+						<hr style="margin-bottom:50px;"></hr>
+							<md-card class="col-md-12 col-xs-12">
+				        <md-card-title>
+				          <md-card-title-text>
+				            <span class="md-headline" style="font-size:40px;">Emails:</span>
+				          </md-card-title-text>
+				        </md-card-title>
+				        <md-card-content>
+									<md-list>
+										<md-list-item class="md-5-line">
+											<div class="md-list-item-text" layout="column">
+													<h2><i class="fa fa-envelope" style="margin-right: 8px;"></i>lianwangtao@gmail.com</h2><md-button class="md-secondary">Write email</md-button>
+											</div>
+										</md-list-item>
+										<md-list-item class="md-5-line">
+											<div class="md-list-item-text" layout="column">
+													<h2><i class="fa fa-envelope"  style="margin-right: 8px;"></i>wlian3@wisc.edu</h2> <md-button class="md-secondary">Write email</md-button>
+											</div>
+										</md-list-item>
+									</md-list>
+				        </md-card-content>
+	      		</md-card>
+						<md-card class="col-md-12 col-xs-12">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline" style="font-size:40px;">Social Network:</span>
+								</md-card-title-text>
+							</md-card-title>
+							<md-card-content>
+								<md-list>
+									<md-list-item class="md-5-line">
+										<div class="md-list-item-text" layout="column">
+												<h2><i class="fa fa-facebook-official" style="margin-right: 8px;"></i>Facebook</h2>
+												<md-button class="md-secondary"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-5-line">
+										<div class="md-list-item-text" layout="column">
+												<h2><i class="fa fa-twitter-square" style="margin-right: 8px;"></i>Twitter</h2>
+												<md-button class="md-secondary"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button>
+										</div>
+									</md-list-item>
+									<md-list-item class="md-5-line">
+										<div class="md-list-item-text" layout="column">
+												<h2><i class="fa fa-instagram" style="margin-right: 8px;"></i>Instagram</h2>
+												<md-button class="md-secondary"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button>
+										</div>
+									</md-list-item>
+								</md-list>
+							</md-card-content>
+					</md-card>
+					<md-card class="col-md-12 col-xs-12">
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-headline" style="font-size:40px;">Others:</span>
+							</md-card-title-text>
+						</md-card-title>
+						<md-card-content>
+							<md-list>
+								<md-list-item class="md-5-line">
+									<div class="md-list-item-text" layout="column">
+											<h2><i class="fa fa-github" style="margin-right: 8px;"></i>Github</h2>
+											<md-button class="md-secondary"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button>
+									</div>
+								</md-list-item>
+							</md-list>
+						</md-card-content>
+				</md-card>
 					</div>
 			</div>
 
