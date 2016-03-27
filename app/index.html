@@ -128,7 +128,7 @@
 						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
 							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
 								<a class="nav-item">
-									<h3 style="font-size:20px; text-align:center;">{{project.name}}</h3>
+									<h3 style="font-size:25px; text-align:center;font-family: 'Roboto Condensed', sans-serif;">{{project.name}}</h3>
 								</a>
 							</div>
 						</md-list-item>
@@ -143,43 +143,48 @@
 			<div class="resume container-fluid" id="resume" >
 					<h1 class="abouth1">Education</h1>
 					<div class="about_article">
-						<hr style="margin-bottom:50px;"></hr>
-						<md-list flex>
+					<hr style="margin-bottom:50px;"></hr>
+						<md-card class="col-md-12 col-xs-12">
+							<md-card-content>
+								<md-list flex>
+									<md-list-item class="md-3-line" style="background-color:white;">
+									<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
+									<div class="md-list-item-text" layout="column">
+										<h3 style="font-size:20px;">Fuyang Elementary School</h3>
+										<h4 style="font-size:15px;"> Elementary School </h4>
+										<h4 style="font-size:15px;">2002-2008</h4>
+									</div>
+								</md-list-item>
+								<md-divider ></md-divider>
+								<md-list-item class="md-3-line" style="background-color:white;">
+								<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+								<div class="md-list-item-text" layout="column">
+									<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
+									<h4 style="font-size:15px;">Middle School</h4>
+									<h4 style="font-size:15px;">2008-2011</h4>
+								</div>
+							</md-list-item>
+								<md-divider ></md-divider>
+								<md-list-item class="md-3-line" style="background-color:white;">
+								<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
+								<div class="md-list-item-text" layout="column">
+									<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
+									<h4 style="font-size:15px;">High School</h4>
+									<h4 style="font-size:15px;">2011-2014</h4>
+								</div>
+							</md-list-item>
+							<md-divider ></md-divider>
 							<md-list-item class="md-3-line" style="background-color:white;">
-							<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
+							<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
 							<div class="md-list-item-text" layout="column">
-								<h3 style="font-size:20px;">Fuyang Elementary School</h3>
-								<h4 style="font-size:15px;"> Elementary School </h4>
-								<h4 style="font-size:15px;">2002-2008</h4>
+								<h3 style="font-size:20px;">University of Wisonsin-Madison</h3>
+								<h4>College</h4>
+								<h4>2014-2018</h4>
 							</div>
 						</md-list-item>
-						<md-divider ></md-divider>
-						<md-list-item class="md-3-line" style="background-color:white;">
-						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-						<div class="md-list-item-text" layout="column">
-							<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
-							<h4 style="font-size:15px;">Middle School</h4>
-							<h4 style="font-size:15px;">2008-2011</h4>
-						</div>
-					</md-list-item>
-						<md-divider ></md-divider>
-						<md-list-item class="md-3-line" style="background-color:white;">
-						<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-						<div class="md-list-item-text" layout="column">
-							<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
-							<h4 style="font-size:15px;">High School</h4>
-							<h4 style="font-size:15px;">2011-2014</h4>
-						</div>
-					</md-list-item>
-					<md-divider ></md-divider>
-					<md-list-item class="md-3-line" style="background-color:white;">
-					<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
-					<div class="md-list-item-text" layout="column">
-						<h3 style="font-size:20px;">University of Wisonsin-Madison</h3>
-						<h4>College</h4>
-						<h4>2014-2018</h4>
-					</div>
-				</md-list-item>
+					</md-list>
+					</md-card-content>
+				</md-card>
 				</div>
 			</div>
 
@@ -233,13 +238,15 @@
 									<md-list>
 										<md-list-item class="md-5-line">
 											<div class="md-list-item-text" layout="column">
-													<h2><i class="fa fa-envelope" style="margin-right: 8px;"></i>lianwangtao@gmail.com</h2><md-button class="md-secondary">Write email</md-button>
+													<h2><i class="fa fa-envelope" style="margin-right: 8px;"></i>lianwangtao@gmail.com</h2>
+													<md-button class="md-secondary md-icon-button"><ng-md-icon icon="create"></ng-md-icon></md-button>
 											</div>
 										<md-divider ></md-divider>
 										</md-list-item>
 										<md-list-item class="md-5-line">
 											<div class="md-list-item-text" layout="column">
-													<h2><i class="fa fa-envelope"  style="margin-right: 8px;"></i>wlian3@wisc.edu</h2> <md-button class="md-secondary">Write email</md-button>
+													<h2><i class="fa fa-envelope"  style="margin-right: 8px;"></i>wlian3@wisc.edu</h2>
+													<md-button class="md-secondary md-icon-button"><ng-md-icon icon="create"></ng-md-icon> </md-button>
 											</div>
 										</md-list-item>
 									</md-list>
@@ -255,7 +262,8 @@
 								<md-list>
 									<md-list-item class="md-5-line">
 										<div class="md-list-item-text" layout="column">
-												<h2><i class="fa fa-facebook-official" style="margin-right: 8px;"></i>Facebook</h2>
+												<h2>
+													<i class="fa fa-facebook-official" style="margin-right: 8px;"></i>Facebook</h2>
 												<a href="https://www.facebook.com/lian.wangtao"><md-button class="md-secondary md-icon-button"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button></a>
 										</div>
 									</md-list-item>
