@@ -2,6 +2,7 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, inital-scale=1.0">
 			<title>Shane Lian</title>
 			<script src="https://code.jquery.com/jquery-2.2.2.min.js"
 			integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
@@ -110,7 +111,7 @@
 
 				<h1 class="abouth1">About Me</h1>
 				<div class="about_article">
-					<hr style="margin-bottom:50px;"></hr>
+					<hr style="margin-bottom:50px;">
 				  	<p>Hi Everyone!</p>
 			    	<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
 						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</p>
@@ -123,7 +124,7 @@
 				<div class="content" ng-controller="AppCtrl">
 				<h1 class="abouth1" style="margin-bottom: 5%;">Projects</h1>
 				<div ng-controller="projectsListCtrl" class="about_article">
-					<hr style="margin-bottom:50px;"></hr>
+					<hr style="margin-bottom:50px;">
 					<md-list class="projects_list" style="padding-left:0; padding-bottom: 100px;">
 						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
 							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
@@ -143,7 +144,7 @@
 			<div class="resume container-fluid" id="resume" >
 					<h1 class="abouth1">Education</h1>
 					<div class="about_article">
-					<hr style="margin-bottom:50px;"></hr>
+					<hr style="margin-bottom:50px;">
 						<md-card class="col-md-12 col-xs-12">
 							<md-card-content>
 								<md-list flex>
@@ -260,7 +261,7 @@
 							</md-card-title>
 							<md-card-content>
 								<md-list>
-									<md-list-item class="md-5-line">
+									<md-list-item class="md-5-line" md-ink-ripple>
 										<div class="md-list-item-text" layout="column">
 												<h2>
 													<i class="fa fa-facebook-official" style="margin-right: 8px;"></i>Facebook</h2>
@@ -268,14 +269,14 @@
 										</div>
 									</md-list-item>
 									<md-divider ></md-divider>
-									<md-list-item class="md-5-line">
+									<md-list-item class="md-5-line" md-ink-ripple>
 										<div class="md-list-item-text" layout="column">
 												<h2><i class="fa fa-twitter-square" style="margin-right: 8px;"></i>Twitter</h2>
 												<a href="https://twitter.com/shanelian920"><md-button class="md-secondary md-icon-button"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button></a>
 										</div>
 									</md-list-item>
 									<md-divider ></md-divider>
-									<md-list-item class="md-5-line">
+									<md-list-item class="md-5-line" md-ink-ripple>
 										<div class="md-list-item-text" layout="column">
 												<h2><i class="fa fa-instagram" style="margin-right: 8px;"></i>Instagram</h2>
 												<a href="https://www.instagram.com/shanelian/"><md-button class="md-secondary md-icon-button"><i class="fa fa-arrow-circle-right fa-2x"></i></md-button></a>
