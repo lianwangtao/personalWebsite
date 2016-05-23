@@ -1,0 +1,97 @@
+/* General */
+.main {
+    padding:0;
+    padding-top: 7%;
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 620px;
+}
+
+@media screen and (min-width: 376px) {
+   .main {
+       padding-left: 15%;
+       padding-top: 10%;
+   }
+}
+
+.fa {
+    font-size: 70px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+/* Main */
+.menu {
+    display: none;
+}
+
+.logo {
+    font-size: 40px;
+    padding: 0;
+}
+
+.brick1 {
+    width: 144px;
+    height: 144px;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.thumb {
+    padding: 0;
+    margin: 5px;
+    margin-top: 0;
+}
+
+.img-brick {
+    display: none;
+}
+
+/* About Me */
+.abouth1 {
+    font-size: 40px;
+}
+.about_article {
+    font-size: 16px;
+}
+
+/* Projects */
+.projects {
+    padding-top: 5%;
+}
+
+.project_name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.projects_list {
+    margin: 0;
+}
+
+/* Education */
+.resume {
+    padding:0;
+    padding-top: 5%;
+}
+
+.md-avatar {
+    transform: scale(0.8,0.8);
+}
+.card-actions {
+    display: none;
+}
+
+.md-headline {
+    font-size: 16px;
+    color: black;
+}
+
+.high_school {
+    display: none;
+}
+
+.md-subhead-mobile {
+    display: block;
+}

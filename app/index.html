@@ -27,7 +27,8 @@
 	 		<script src="scripts/angular-aria.min.js" type="text/javascript" ></script>
 	 		<script src="scripts/angular-material.min.js" type="text/javascript" ></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
-
+			<!-- Mobile -->
+			<link rel="stylesheet" href="stylesheets/mobile.css" media="screen and (max-width: 500px)">
 
 		</head>
 
@@ -67,7 +68,6 @@
 					<div class="brick1 thumb">
 						<img class="img1" src="images/resources/squre/07.jpg" width="100%" height=auto alt="">
 					</div>
-					<div class="brick1 thumb img-brick"></div>
 					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="contact" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-phone fa-5x font-icon"></i>
@@ -100,7 +100,7 @@
 					<div class="brick1 thumb img-brick">
 							<img class="img1" src="images/resources/squre/02.jpg" width="100%" height=auto alt="">
 					</div>
-					<div class="brick1 thumb img-brick">
+					<div class="brick1 thumb img">
 							<img class="img1" src="images/resources/squre/01.jpg" width="100%" height=auto alt="">
 					</div>
 				</div>
@@ -113,9 +113,9 @@
 				<div class="about_article">
 					<hr style="margin-bottom:50px;">
 				  	<p>Hi Everyone!</p>
-			    	<p>My name is Shane Lian. (<i>My real first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
-						<p>Besides coding, I love singing and watching movies. I also record my own music when I'm free. You can listen to them in the gallery.</p>
-						<p style="margin-bottom:50px;">Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth coming to visit.</p>
+			    	<p>My name is Shane Lian. (<i>My Chinese first name is Wangtao but I usually use my English name</i>) I'm an international student from China studying in the Univerisity of Wisconsin-Madison. I'm currently majoring Computer Sciences.</p>
+						<p>Besides programming, I love music. I also record my own music when I'm free. You can listen to them in the gallery.</p>
+						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth visiting. Contact me for a guide!</p>
 				</div>
 
 			</div>
@@ -123,13 +123,13 @@
 			<div class="projects" id="projects" >
 				<div class="content" ng-controller="AppCtrl">
 				<h1 class="abouth1" style="margin-bottom: 5%;">Projects</h1>
-				<div ng-controller="projectsListCtrl" class="about_article">
-					<hr style="margin-bottom:50px;">
+				<div ng-controller="projectsListCtrl">
+					<hr style="margin:20px;">
 					<md-list class="projects_list" style="padding-left:0; padding-bottom: 100px;">
-						<md-list-item ng-repeat="project in projects" style="display: inline-block;"  >
+						<md-list-item ng-repeat="project in projects" style="display: inline-block; padding-left: 10px; padding-right: 10px;"  >
 							<div class="brick1 tiles hvr-grow-shadow-1 hvr-underline-from-center-1" ng-click="showTabDialog($event,project)" md-ink-ripple>
 								<a class="nav-item">
-									<h3 style="font-size:25px; text-align:center;font-family: 'Roboto Condensed', sans-serif;">{{project.name}}</h3>
+									<h3 class="project_name">{{project.name}}</h3>
 								</a>
 							</div>
 						</md-list-item>
@@ -141,51 +141,83 @@
 			</div>
 			</div>
 
-			<div class="resume container-fluid" id="resume" >
-					<h1 class="abouth1">Education</h1>
+			<div class="resume" id="resume" >
+					<h1 class="abouth1" style="color:white; margin: 0">Education</h1>
 					<div class="about_article">
-					<hr style="margin-bottom:50px;">
-						<md-card class="col-md-12 col-xs-12">
-							<md-card-content>
-								<md-list flex>
-									<md-list-item class="md-3-line" style="background-color:white;">
-									<img ng-src="images/resources/xiaoxuelogo.jpg" class="md-avatar"/>
-									<div class="md-list-item-text" layout="column">
-										<h3 style="font-size:20px;">Fuyang Elementary School</h3>
-										<h4 style="font-size:15px;"> Elementary School </h4>
-										<h4 style="font-size:15px;">2002-2008</h4>
+					<hr>
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Fuyang Shiyan Elementary School</span>
+									<span class="md-subhead">2002 - 2008</span>
+								</md-card-title-text>
+								<md-card-title-media>
+									<div class="md-media-sm card-media">
+										<img src="images/resources/xiaoxuelogo.jpg" class="md-avatar">
 									</div>
-								</md-list-item>
-								<md-divider ></md-divider>
-								<md-list-item class="md-3-line" style="background-color:white;">
-								<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-								<div class="md-list-item-text" layout="column">
-									<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
-									<h4 style="font-size:15px;">Middle School</h4>
-									<h4 style="font-size:15px;">2008-2011</h4>
-								</div>
-							</md-list-item>
-								<md-divider ></md-divider>
-								<md-list-item class="md-3-line" style="background-color:white;">
-								<img ng-src="images/resources/entelLogo.jpg" class="md-avatar"/>
-								<div class="md-list-item-text" layout="column">
-									<h3 style="font-size:20px;">Hangzhou Entel Foreign Language School</h3>
-									<h4 style="font-size:15px;">High School</h4>
-									<h4 style="font-size:15px;">2011-2014</h4>
-								</div>
-							</md-list-item>
-							<md-divider ></md-divider>
-							<md-list-item class="md-3-line" style="background-color:white;">
-							<img ng-src="images/resources/UWlogo.jpg" class="md-avatar"/>
-							<div class="md-list-item-text" layout="column">
-								<h3 style="font-size:20px;">University of Wisonsin-Madison</h3>
-								<h4>College</h4>
-								<h4>2014-2018</h4>
-							</div>
-						</md-list-item>
-					</md-list>
-					</md-card-content>
-				</md-card>
+								</md-card-title-media>
+							</md-card-title>
+							<md-card-actions class="card-actions" layout="row" layout-align="end center">
+								<md-button>Action 1</md-button>
+								<md-button>Action 2</md-button>
+							</md-card-actions>
+						</md-card>
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Hangzhou Entel Foreign Language School</span>
+									<span class="md-subhead">Middle School</span>
+									<span class="md-subhead">2008 - 2011</span>
+									<span class="md-subhead md-subhead-mobile">High School</span>
+									<span class="md-subhead md-subhead-mobile">2011 - 2014</span>
+								</md-card-title-text>
+								<md-card-title-media>
+									<div class="md-media-sm card-media">
+										<img src="images/resources/entelLogo.jpg" class="md-avatar">
+									</div>
+								</md-card-title-media>
+							</md-card-title>
+							<md-card-actions class="card-actions" layout="row" layout-align="end center">
+								<md-button>Action 1</md-button>
+								<md-button>Action 2</md-button>
+							</md-card-actions>
+						</md-card>
+						<md-card class="high_school">
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Hangzhou Entel Foreign Language School</span>
+									<span class="md-subhead">High School</span>
+									<span class="md-subhead">2011 - 2014</span>
+								</md-card-title-text>
+								<md-card-title-media>
+									<div class="md-media-sm card-media">
+										<img src="images/resources/entelLogo.jpg" class="md-avatar">
+									</div>
+								</md-card-title-media>
+							</md-card-title>
+							<md-card-actions class="card-actions" layout="row" layout-align="end center">
+								<md-button>Action 1</md-button>
+								<md-button>Action 2</md-button>
+							</md-card-actions>
+						</md-card>
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">University of Wiscosin-Madison</span>
+									<span class="md-subhead">Computer Sciences, BA</span>
+									<span class="md-subhead">2014 - 2018</span>
+								</md-card-title-text>
+								<md-card-title-media>
+									<div class="md-media-sm card-media">
+										<img src="images/resources/UWlogo.jpg" class="md-avatar">
+									</div>
+								</md-card-title-media>
+							</md-card-title>
+							<md-card-actions class="card-actions" layout="row" layout-align="end center">
+								<md-button>Action 1</md-button>
+								<md-button>Action 2</md-button>
+							</md-card-actions>
+						</md-card>
 				</div>
 			</div>
 

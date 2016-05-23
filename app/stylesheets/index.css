@@ -153,9 +153,6 @@ section {
   min-height: 1px;
   margin-left: 0px;
 }
-.navbar .container {
-  width: 1170px;
-}
 
 .font-icon {
   padding-left: 30px;
@@ -330,9 +327,10 @@ section {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 900px;
+    min-height: 768px;
     padding-top: 50px;
     width: 100%;
+    height: 100%;
     color:white;
 }
 
@@ -359,19 +357,16 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 736px;
-    padding-top: 50px;
+    height: 100%;
+    padding-top: 20px;
     padding-bottom: 5%;
-    color: white;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    overflow:auto;
+    overflow: visible;
 }
 
-.school {
-  font-size: 25px;
-  color: black;
-}
+
 
 /* Contact */
 .contact {
