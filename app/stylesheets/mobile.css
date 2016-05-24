@@ -84,7 +84,7 @@
 }
 
 .md-headline {
-    font-size: 16px;
+    font-size: 17px;
     color: black;
 }
 
@@ -94,4 +94,25 @@
 
 .md-subhead-mobile {
     display: block;
+}
+
+/* Contact */
+.contact {
+    padding:0;
+    padding-top: 5%;
+}
+.email {
+    text-align: center;
+    font-size: 16px;
+}
+.fa-instagram {
+    font-size: 64px;
+}
+.email-icon {
+    text-align: center;
+}
+.card-center {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

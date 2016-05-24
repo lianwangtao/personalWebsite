@@ -2,7 +2,7 @@
  * Created by shanelian on 7/6/15.
  */
 
- 'use strict';
+'use strict';
 var app = angular.module('shane', ['duScroll','ngMaterial','ngMdIcons']);
 
 app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http) {
@@ -10,6 +10,11 @@ app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http) {
     $scope.projects = data;
   });
 }]);
+
+app.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('default')
+      .primaryPalette('blue')
+});
 
 app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) {
 
@@ -26,7 +31,7 @@ app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) 
 app.controller('AppCtrl', function($scope, $mdDialog, $mdMedia) {
   $scope.status = '  ';
   $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
-  
+
   $scope.showTabDialog = function(ev,project) {
     $mdDialog.show({
       controller: DialogController,
