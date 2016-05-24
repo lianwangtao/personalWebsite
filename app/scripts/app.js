@@ -18,6 +18,13 @@ app.config(function($mdThemingProvider) {
 
 app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) {
 
+  var width = document.getElementById("main").clientWidth;
+  if (width >= 992 && width <= 1265) {
+    $scope.size = "brow col-md-offset-2";
+  } else if (width > 1265) {
+    $scope.size = "brow col-lg-9 col-lg-offset-3";
+  }
+
   $(".brick1").hover(function() {
     $(this).addClass("pulse");
     }, function() {

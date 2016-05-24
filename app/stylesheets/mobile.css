@@ -8,6 +8,10 @@
     min-height: 620px;
 }
 
+hr {
+    margin: 20px;
+}
+
 @media screen and (min-width: 376px) {
    .main {
        padding-left: 15%;
@@ -31,6 +35,9 @@
     padding: 0;
 }
 
+.empty {
+    display: none;
+}
 .brick1 {
     width: 144px;
     height: 144px;
@@ -59,6 +66,8 @@
 /* Projects */
 .projects {
     padding-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .project_name {
@@ -67,6 +76,7 @@
 }
 
 .projects_list {
+    padding: 0;
     margin: 0;
 }
 
@@ -101,18 +111,7 @@
     padding:0;
     padding-top: 5%;
 }
-.email {
-    text-align: center;
-    font-size: 16px;
-}
+
 .fa-instagram {
     font-size: 64px;
-}
-.email-icon {
-    text-align: center;
-}
-.card-center {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
 }

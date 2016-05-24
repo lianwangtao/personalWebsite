@@ -1,0 +1,57 @@
+/* General */
+.main {
+    padding:0;
+    padding-top: 7%;
+    padding-left: 28%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 620px;
+}
+
+
+hr {
+    margin: 25px;
+}
+
+.empty {
+    display: none;
+}
+
+.brick1 {
+    margin: 13px;
+}
+
+.email {
+    text-align: center;
+    font-size: 20px;
+}
+
+.projects{
+    padding-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.resume {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contact {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.project_name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.projects_list {
+    padding: 0;
+    margin: 0;
+}
