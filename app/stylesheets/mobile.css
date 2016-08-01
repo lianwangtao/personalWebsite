@@ -55,6 +55,14 @@ hr {
     display: none;
 }
 
+.hidden_m {
+  visibility: hidden;
+}
+
+#ex {
+  margin-left: 0;
+}
+
 /* About Me */
 .abouth1 {
     font-size: 40px;
