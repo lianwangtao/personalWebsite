@@ -13,7 +13,8 @@ app.controller('projectsListCtrl', ['$scope','$http', function($scope, $http) {
 
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-      .primaryPalette('blue')
+      .primaryPalette('blue');
+  $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
 });
 
 app.controller('windowsizeCtrl', ['$scope','$window', function($scope, $window) {

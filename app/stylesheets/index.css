@@ -108,7 +108,9 @@ section {
 /* MAIN-SECTION */
 
 .main {
-    background-color: #1DA3EE;
+    background: #00c6ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,  #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100%;
     padding-top: 5%;
 }
@@ -290,7 +292,7 @@ section {
     min-height: 736px;
     padding-top: 50px;
     width: 100%;
-    color: white;
+    color: #ecf0f1;
     padding-left: 10%;
     padding-right: 10%;
     display: block;
@@ -322,18 +324,17 @@ section {
 /* Experiences */
 
 .experiences {
-    background-color: #16A79D;
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
+    color:#ecf0f1; 
+    background: #00C9FF; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #00C9FF , #1abc9c); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00C9FF , #1abc9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     /* bottom, image */
     background-size: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 736px;
+    min-height: 100%;
     max-height: none;
     padding-top: 20px;
     padding-bottom: 10%;
@@ -346,17 +347,13 @@ section {
 /* Projects */
 .projects {
     /*background-color: #1253A4;*/
-    background-color: #0092D7;
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    /* bottom, image */
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    /*background-color: #0092D7;*/
+
+    background: #1abc9c; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #1abc9c , #f1c40f); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1abc9c , #f1c40f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     height: 100%;
     min-height: 768px;
     padding-top: 50px;
@@ -377,17 +374,9 @@ section {
 /* Resume */
 
 .resume {
-    background-color: #16A79D;
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    /* bottom, image */
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #f1c40f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f1c40f , #e67e22); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f1c40f , #e67e22); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 736px;
     height: 100%;
     padding-top: 20px;
@@ -402,12 +391,9 @@ section {
 
 /* Contact */
 .contact {
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    /* bottom, image */
+    background: #e67e22; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #e67e22 , #e74c3c); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #e67e22 , #e74c3c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: 100%;
     background-attachment: fixed;
     background-position: center;
