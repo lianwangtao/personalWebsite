@@ -42,6 +42,7 @@
 						<ul class="menu__inner">
 							<li du-smooth-scroll="main"><i class="fa fa-fw fa-home hvr-grow"></i>Home</li>
 							<li du-smooth-scroll="aboutme"><i class="fa fa-fw fa-user hvr-grow"></i>About Me</li>
+							<li du-smooth-scroll="experiences"><i class="fa fa-fw fa-briefcase hvr-grow"></i>Experiences</li>
 							<li du-smooth-scroll="projects"><i class="fa fa-fw fa-lightbulb-o hvr-grow"></i>Projects</li>
 							<li du-smooth-scroll="resume"><i class="fa fa-fw fa-graduation-cap hvr-grow"></i>Education</li>
 							<li du-smooth-scroll="contact"><i class="fa fa-fw fa-phone hvr-grow"></i>Contact</li>
@@ -67,7 +68,15 @@
 					<div class="brick1 thumb">
 						<img class="img1" src="images/resources/squre/07.jpg" width="100%" height=auto alt="">
 					</div>
-					<div class="brick1 thumb empty"></div>
+
+					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="contact" md-ink-ripple>
+						<a class="nav-item">
+							<i class="fa fa-briefcase fa-5x" style="margin-left: 17px; margin-bottom: 10px;"></i>
+							<h3 class="title">Experiences</h3>
+						</a>
+					</div>
+
+
 					<div class="brick1 odd tiles hvr-grow-shadow-1 hvr-underline-from-center-1" du-smooth-scroll="contact" md-ink-ripple>
 						<a class="nav-item">
 							<i class="fa fa-phone fa-5x font-icon"></i>
@@ -107,7 +116,7 @@
 
 			</div>
 
- 			<div class="about-me" id="aboutme" >
+ 			<div class="about-me" id="aboutme">
 
 				<h1 class="abouth1">About Me</h1>
 				<div class="about_article">
@@ -117,8 +126,32 @@
 						<p>Besides programming, I love music. I also record my own music when I'm free. You can listen to them in the gallery.</p>
 						<p>Hangzhou is my hometown. As one of the most famous cities in China, Hangzhou is well-known for its beautiful scenery. It is definitly worth visiting. Contact me for a guide!</p>
 				</div>
-
 			</div>
+
+			<div class="experiences" id="experiences" >
+					<h1 class="abouth1" style="color:white; margin: 0">Education</h1>
+					<div>
+					<hr>
+						<md-card>
+							<md-card-title>
+								<md-card-title-text>
+									<span class="md-headline">Fuyang Shiyan Elementary School</span>
+									<span class="md-subhead">2002 - 2008</span>
+								</md-card-title-text>
+								<md-card-title-media>
+									<div class="md-media-sm card-media">
+										<img src="images/resources/xiaoxuelogo.jpg" class="md-avatar">
+									</div>
+								</md-card-title-media>
+							</md-card-title>
+							<md-card-actions class="card-actions" layout="row" layout-align="end center">
+								<md-button class="md-raised md-primary md-hue-2" ng-href="http://www.xyxx.cn" target="_blank">Website</md-button>
+							</md-card-actions>
+						</md-card>
+					</div>
+				</div>
+
+
 
 			<div class="projects" id="projects" >
 				<div class="content" ng-controller="AppCtrl">

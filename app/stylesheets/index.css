@@ -276,16 +276,11 @@ section {
 /* ABOUT-ME */
 
 .about-me {
-    background-color: #F04C40;
     /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
+    background-image:url('../images/resources/02_bg.jpg');
     /* bottom, image */
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
+    background-size: cover;
+    background-position: center;;
     background-repeat: no-repeat;
     height: 100%;
     min-height: 736px;
@@ -319,6 +314,30 @@ section {
 
 
 /* END of ABOUT-ME */
+
+/* Experiences */
+
+.experiences {
+    background-color: #16A79D;
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 736px;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 100%;
+    overflow: visible;
+}
 
 /* Projects */
 .projects {
