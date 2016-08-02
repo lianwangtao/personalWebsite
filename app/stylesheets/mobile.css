@@ -90,6 +90,13 @@ hr {
     margin: 0;
 }
 
+/* experiences */
+
+.ex_pic {
+  display: none;
+}
+
+
 /* Education */
 .resume {
   padding-top: 5%;
@@ -128,4 +135,8 @@ hr {
 
 .fa-instagram {
     font-size: 64px;
+}
+
+.gmail {
+  font-size: 12px;
 }
