@@ -92,8 +92,9 @@ hr {
 
 /* Education */
 .resume {
-    padding:0;
-    padding-top: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .md-avatar {
@@ -118,8 +119,9 @@ hr {
 
 /* Contact */
 .contact {
-    padding:0;
-    padding-top: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .fa-instagram {
