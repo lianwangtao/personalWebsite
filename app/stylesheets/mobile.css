@@ -95,6 +95,7 @@ hr {
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
+  min-height: 100%;
 }
 
 .md-avatar {
@@ -122,6 +123,7 @@ hr {
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
+  min-height: 100%;
 }
 
 .fa-instagram {

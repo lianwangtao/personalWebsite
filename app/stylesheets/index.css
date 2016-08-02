@@ -377,8 +377,7 @@ section {
     background: #f1c40f; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #f1c40f , #e67e22); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #f1c40f , #e67e22); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 736px;
-    height: 100%;
+    min-height: 100%;
     padding-top: 20px;
     padding-bottom: 5%;
     padding-left: 25%;
@@ -399,10 +398,8 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-color:  #F4AC42;
-    min-height: 736px;
-    height: 100%;
+    min-height: 100%;
     padding-top: 20px;
-    padding-bottom: 10%;
     width: 100%;
     padding-left: 25%;
     padding-right: 25%;
