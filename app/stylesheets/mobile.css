@@ -22,8 +22,8 @@ hr {
 
 .fa {
     font-size: 70px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 /* Main */
@@ -139,4 +139,12 @@ hr {
 
 .gmail {
   font-size: 12px;
+}
+
+.email {
+  font-size: 0.9em;
+}
+
+.md-list-item .md-no-style, md-list-item.md-no-proxy {
+  padding: 0;
 }
