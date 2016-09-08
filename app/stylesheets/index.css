@@ -289,13 +289,15 @@ section {
     background-position: center;;
     background-repeat: no-repeat;
     height: 100%;
-    min-height: 736px;
-    padding-top: 50px;
-    width: 100%;
+    padding-top: 30px;
     color: #ecf0f1;
-    padding-left: 10%;
-    padding-right: 10%;
+    min-height: 100%;
+    max-height: none;
+    padding-left: 5%;
+    padding-right: 5%;
     display: block;
+    width: 100%;
+    overflow:initial;
 }
 
 
@@ -304,12 +306,13 @@ section {
     margin-top: 0px;
     font-size: 80px;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .about_article {
     font-size: 30px;
-    padding-left: 13%;
-    padding-right: 13%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .about_img {
